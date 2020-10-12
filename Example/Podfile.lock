@@ -1,0 +1,16 @@
+PODS:
+  - CSModule_Cart (0.1.0)
+
+DEPENDENCIES:
+  - CSModule_Cart (from `../`)
+
+EXTERNAL SOURCES:
+  CSModule_Cart:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CSModule_Cart: 67245e6ba6b3cc7b72550d3148fb3e4b04d9a5c6
+
+PODFILE CHECKSUM: c75d312f7ebea3d218aed4e28c941c0b01f508ce
+
+COCOAPODS: 1.10.0.rc.1

@@ -1,0 +1,6 @@
+use_frameworks!
+target 'CSModule_Cart_Tests' do
+  pod 'CSModule_Cart', :path => '../'
+  
+  
+end
