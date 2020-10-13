@@ -67,9 +67,9 @@
     
     // 调用"商品组件"获取商品名称
     id<CSGoodsProtocol> goodsApi = [CSModuleManager instanceForProtocol:@protocol(CSGoodsProtocol)];
-    NSString *goodsName = [goodsApi goodsNameForGoodsId:goodsId];
+    NSString *goodsName = goodsApi ? [goodsApi goodsNameForGoodsId:goodsId] : @"";
     
-    NSUInteger goodsCount = [[CSCartManager defaultManager] countForGoodsId:goodsId];
+    NSUInteger goodsCount = goodsApi ? [[CSCartManager defaultManager] countForGoodsId:goodsId] : 0;
     
     cell.textLabel.text = goodsName;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"数量: %ld", goodsCount];
@@ -84,7 +84,9 @@
     
     // 调用"商品组件"获取商品详情页
     id<CSGoodsProtocol> goodsApi = [CSModuleManager instanceForProtocol:@protocol(CSGoodsProtocol)];
-    UIViewController *goodsVC = [goodsApi crateGoodsViewControllerWithGoodsId:goodsId];
-    [self.navigationController pushViewController:goodsVC animated:YES];
+    if (goodsApi) {
+        UIViewController *goodsVC = [goodsApi crateGoodsViewControllerWithGoodsId:goodsId];
+        [self.navigationController pushViewController:goodsVC animated:YES];
+    }
 }
 @end
