@@ -1,15 +1,15 @@
 //
-//  CSCartProImp.m
+//  CSModule_Cart.m
 //  CSModule_Cart
 //
-//  Created by hcs on 2020/10/12.
+//  Created by hcs on 2020/10/13.
 //
 
-#import "CSCartProImp.h"
+#import "CSModule_Cart.h"
 #import "CSCartManager.h"
 #import "CSCartViewController.h"
 
-@implementation CSCartProImp
+@implementation CSModule_Cart
 + (void)load {
     [CSModuleManager registClass:self forProtocol:@protocol(CSCartProtocol)];
 }
@@ -19,8 +19,7 @@
     return [[CSCartManager defaultManager] countForGoodsId:goodsId];
 }
 
-- (UIViewController *)crateCartViewController {
+- (UIViewController *)createCartViewController {
     return [[CSCartViewController alloc] init];
 }
-
 @end

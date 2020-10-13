@@ -1,8 +1,8 @@
 //
-//  CSCartProImp.h
+//  CSModule_Cart.h
 //  CSModule_Cart
 //
-//  Created by hcs on 2020/10/12.
+//  Created by hcs on 2020/10/13.
 //
 
 #import <Foundation/Foundation.h>
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CSCartProImp : NSObject<CSCartProtocol>
+@interface CSModule_Cart : NSObject<CSCartProtocol>
 
 @end
 

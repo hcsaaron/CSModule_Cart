@@ -1,0 +1,16 @@
+//
+//  CSModule_Cart-Prefix.pch
+//  Pods
+//
+//  Created by hcs on 2020/10/13.
+//
+
+#ifndef CSModule_Cart_Prefix_pch
+#define CSModule_Cart_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "CSModule_Cart.h"
+
+#endif /* CSModule_Cart_Prefix_pch */

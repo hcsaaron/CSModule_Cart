@@ -65,8 +65,9 @@
     
     NSString *goodsId = self.goods[indexPath.row];
     
-    id<CSGoodsProtocol> api = [CSModuleManager instanceForProtocol:@protocol(CSGoodsProtocol)];
-    NSString *goodsName = [api goodsNameForGoodsId:goodsId];
+    // 调用"商品组件"获取商品名称
+    id<CSGoodsProtocol> goodsApi = [CSModuleManager instanceForProtocol:@protocol(CSGoodsProtocol)];
+    NSString *goodsName = [goodsApi goodsNameForGoodsId:goodsId];
     
     NSUInteger goodsCount = [[CSCartManager defaultManager] countForGoodsId:goodsId];
     
@@ -81,8 +82,9 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSString *goodsId = self.goods[indexPath.row];
     
-    id<CSGoodsProtocol> api = [CSModuleManager instanceForProtocol:@protocol(CSGoodsProtocol)];
-    UIViewController *goodsVC = [api crateGoodsViewControllerWithGoodsId:goodsId];
+    // 调用"商品组件"获取商品详情页
+    id<CSGoodsProtocol> goodsApi = [CSModuleManager instanceForProtocol:@protocol(CSGoodsProtocol)];
+    UIViewController *goodsVC = [goodsApi crateGoodsViewControllerWithGoodsId:goodsId];
     [self.navigationController pushViewController:goodsVC animated:YES];
 }
 @end
